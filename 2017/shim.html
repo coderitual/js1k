@@ -110,7 +110,7 @@
       // enable canvas shim at all? (2d/3d). other settings are ignored if this is false.
       var TOKEN_CANVAS_SHIM = true;
       // true enables webgl shim (exposes `g`), false enables canvas shim (exposes `c`)
-      var TOKEN_WEBGL = false;
+      var TOKEN_WEBGL = true;
       // px, 0 means always 100%
       var TOKEN_MAX_WIDTH = 0;
       // px, 0 means always 100%
@@ -126,6 +126,10 @@
       // THIS IS WHERE YOUR DEMO GOES
       document.write('see console');
       console.log('demo here', window.a, b, window.c, window.g, window.d);
+      const script = document.createElement('script');
+      script.src = 'src/index.js';
+      script.type = 'text/javascript';
+      b.appendChild(script);
       // END
     </script>
     <script>
