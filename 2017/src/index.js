@@ -9,7 +9,6 @@ const drawCircle = (x, y, r) => {
   c.fill();
 };
 
-
 const step = 22;
 const wshift = (w - ((w / step) | 0) * step) / 2;
 const hshift = (h - ((h / step) | 0) * step) / 2;
