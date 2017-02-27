@@ -19,11 +19,12 @@ const update = (dt) => {
       const x = i * 22 + (j % 2 ? 0 : 11);
       const y = j * 22;
 
-
       const v = [m[0] - x, m[1] - y];                         // vector to the middle
       const vl = Math.sqrt(v[0] * v[0] + v[1] * v[1]);        // vector length
       const vn = [v[0] / vl, v[1] / vl];                      // normalized vector
-      const mv = (Math.cos(dt / 400 - vl / 100) - 1) * 50;    // movement modifier
+      const mv = (Math.cos(dt / 360 - vl / 100) - 1) * 50;    // movement modifier
+      c.globalAlpha = 0.4;
+      drawCircle(x + vn[0] * mv, y + vn[1] * mv, 3);
       drawCircle(x + vn[0] * mv, y + vn[1] * mv, 3);
     }
   }
