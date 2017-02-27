@@ -19,9 +19,12 @@ const update = (dt) => {
       const x = i * 22 + (j % 2 ? 0 : 11);
       const y = j * 22;
 
-      // vector to the middle
-      const v = [m[0] - x, m[y] - y];
-      drawCircle(x, y, 2);
+
+      const v = [m[0] - x, m[1] - y];                   // vector to the middle
+      const vl = Math.sqrt(v[0] * v[0] + v[1] * v[1]);  // vector length
+      const vn = [v[0] / vl, v[1] / vl];                // normalized vector
+
+      drawCircle(x + vn[0] * Math.cos(dt / 1000) * vl, y + vn[1] * Math.cos(dt / 1000) * vl, 2);
     }
   }
 };
