@@ -14,7 +14,7 @@ const wshift = (w - ((w / step) | 0) * step) / 2;
 const hshift = (h - ((h / step) | 0) * step) / 2;
 
 const update = (dt) => {
-  c.fillStyle = "rgba(32, 30, 28, 0.25)";
+  c.fillStyle = "rgba(32, 30, 28, 0.3)";
   c.fillRect(0, 0, w, h);
   c.fillStyle = '#FFF';
 
@@ -27,7 +27,7 @@ const update = (dt) => {
       const vl = Math.sqrt(v[0] * v[0] + v[1] * v[1]);        // vector length
       const vn = [v[0] / vl, v[1] / vl];                      // normalized vector
       const mv = (Math.cos(dt / 360 - vl / 100) - 1) * 50;    // movement modifier
-      drawCircle(x + vn[0] * mv, y + vn[1] * mv, 2);
+      drawCircle(x + vn[0] * mv, y + vn[1] * mv, 2.5);
     }
   }
   c.fillStyle = '#FF0000';
