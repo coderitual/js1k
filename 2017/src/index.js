@@ -9,14 +9,19 @@ const drawCircle = (x, y, r) => {
   c.fill();
 };
 
+
+const parts = 28;
+const wshift = w / parts * parts / 2;
+console.log(m[0], wshift)
+
 const update = (dt) => {
-  c.fillStyle = "rgba(0, 0, 0, 0.2)";
+  c.fillStyle = "rgba(0, 0, 0, 0.25)";
   c.fillRect(0, 0, w, h);
   c.fillStyle = '#FFF';
-  const parts = 20;
+
   for (let j = 0; j < h / parts; j++) { 
     for (let i = 0; i < w / parts; i++) {
-      const x = i * parts + (j % 2 ? 0 : parts / 2);
+      const x = i * parts + (j % 2 ? parts / 2 : 0);
       const y = j * parts;
 
       const v = [m[0] - x, m[1] - y];                         // vector to the middle
@@ -26,7 +31,8 @@ const update = (dt) => {
       drawCircle(x + vn[0] * mv, y + vn[1] * mv, 2);
     }
   }
-
+  c.fillStyle = '#FF0000';
+  drawCircle(m[0],m[1], 2);
 };
 
 const loop = (dt) => {
