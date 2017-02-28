@@ -9,7 +9,7 @@ const drawCircle = (x, y, r) => {
   c.fill();
 };
 
-const step = 25;                                    // distance between point
+const step = 20;                                    // distance between point
 const wshift = (w - ((w / step) | 0) * step) / 2;   // shift to center relative to width
 const hshift = (h - ((h / step) | 0) * step) / 2;   // shift to center relative to height
 
