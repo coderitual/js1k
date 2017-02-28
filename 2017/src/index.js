@@ -4,7 +4,7 @@ const m = [w / 2, h / 2]
 
 const drawCircle = (x, y, r) => {
   c.beginPath();
-  c.arc(x, y, r, 0, Math.PI*2, true); 
+  c.arc(x, y, r, 0, Math.PI*2, true);
   c.closePath();
   c.fill();
 };
@@ -14,11 +14,11 @@ const wshift = (w - ((w / step) | 0) * step) / 2;   // shift to center relative 
 const hshift = (h - ((h / step) | 0) * step) / 2;   // shift to center relative to height
 
 const update = (dt) => {
-  c.fillStyle = 'rgba(32, 30, 28, 0.3)';
+  c.fillStyle = 'rgba(32, 30, 28, 255)';
   c.fillRect(0, 0, w, h);
   c.fillStyle = '#FFF';
-
-  for (let j = 0; j < h / step; j++) { 
+  c.strokeStyle = '#FFF';
+  for (let j = 0; j < h / step; j++) {
     for (let i = 0; i < w / step; i++) {
       const x = i * step + (j % 2 ? 0 : step / 2) + wshift;   // shift even lines
       const y = j * step + hshift;
@@ -27,10 +27,14 @@ const update = (dt) => {
       const vl = Math.sqrt(v[0] * v[0] + v[1] * v[1]);        // vector length
       const vn = [v[0] / vl, v[1] / vl];                      // normalized vector
       const mv = (Math.cos(dt / 360 - vl / 100) - 1) * 50;    // movement modifier
-      drawCircle(x + vn[0] * mv, y + vn[1] * mv, 2.5);
+      const mv2 = (Math.cos((dt - 180) / 360 - vl / 100) - 1) * 50;
+      drawCircle(x + vn[0] * mv, y + vn[1] * mv, 3);
+      c.beginPath();
+      c.moveTo(x + vn[0] * mv, y + vn[1] * mv);
+      c.lineTo(x + vn[0] * mv2, y + vn[1] * mv2);
+      c.stroke();
     }
   }
-  c.fillStyle = '#FF0000';
 };
 
 const loop = (dt) => {
