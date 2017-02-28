@@ -14,7 +14,7 @@ const wshift = (w - ((w / step) | 0) * step) / 2;   // shift to center relative 
 const hshift = (h - ((h / step) | 0) * step) / 2;   // shift to center relative to height
 
 const update = (dt) => {
-  c.fillStyle = 'rgba(32, 30, 28, 0.25)';
+  c.fillStyle = 'rgba(32, 30, 28, 0.3)';
   c.fillRect(0, 0, w, h);
   c.fillStyle = '#FFF';
 
