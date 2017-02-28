@@ -31,7 +31,6 @@ const update = (dt) => {
     }
   }
   c.fillStyle = '#FF0000';
-  drawCircle(m[0],m[1], 2);
 };
 
 const loop = (dt) => {
