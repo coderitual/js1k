@@ -1,5 +1,5 @@
 # js1k
-JS1K competition entries
+[JS1k](http://js1k.com) competition entries.
 
 ### 2017 - Magic
 
