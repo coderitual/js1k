@@ -1,0 +1,12 @@
+{
+  "name": "js1k-2018",
+  "description": "JS1k 2018 entry - The Volatile Coin Mine",
+  "version": "0.0.0",
+  "devDependencies": {
+    "uglify-js": "2.4.x",
+    "jscrush": "0.0.0"
+  },
+  "scripts": {
+    "build": "cat source.js | uglifyjs -c unused=false | tee minified.js | jscrush > crushed.js && wc -c *.js"
+  }
+}
