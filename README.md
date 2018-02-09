@@ -1,6 +1,4 @@
-# js1k
-
-[JS1k](http://js1k.com) competition entries.
+# JS1k entries
 
 ### [2017 - Magic](https://js1k.com/2017-magic/demos)
 
