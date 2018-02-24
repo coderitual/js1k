@@ -9,4 +9,3 @@ L = function() {
 };
 
 L();
-fun
