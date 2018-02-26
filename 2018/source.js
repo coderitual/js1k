@@ -3,6 +3,12 @@
  * coptyright © coderitual
  */
 
+/**
+ * a = <canvas>
+ * b = <body>
+ * c = context
+ */
+
 var coin = [
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 418">',
   '<g class="coin coin--first">',
