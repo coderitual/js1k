@@ -10,6 +10,6 @@ const coin = [
       '<ellipse class="coin__face" cx="27" cy="5.5" rx="26" ry="5.5"/>',
     '</g>',
   '</svg>'
-].join();
+].join('');
 
 a.insertAdjacentHTML('afterend', coin);
