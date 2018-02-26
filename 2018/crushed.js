@@ -1,1 +1,1 @@
-_='t=0,L=function(){setTimeout(L,9),c.fillRect(0,10,t++,50)},L();';for(Y in $='')with(_.split($[Y]))_=join(pop());eval(_)
+_='';for(Y in $='')with(_.split($[Y]))_=join(pop());eval(_)
